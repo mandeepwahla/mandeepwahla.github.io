@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooted & Ready — Your Mindset Program Is Ready</title>
+<style>
+  :root{
+    --paper: #f3eef7;
+    --ink: #241a30;
+    --clay: #8a5a1e;
+    --clay-dark: #6b4416;
+    --line: #d9cce6;
+    --muted: #6b6178;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 24px;
+  }
+  .card{
+    max-width: 560px;
+    width:100%;
+    border: 1px solid var(--line);
+    padding: 48px 40px;
+    position:relative;
+  }
+  .eyebrow{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    color: var(--clay);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  h1{
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  h1 em{
+    font-style: italic;
+    color: var(--clay-dark);
+  }
+  p.lede{
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .divider{
+    width: 48px;
+    height: 2px;
+    background: var(--clay);
+    margin: 28px 0;
+  }
+  .cta{
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--clay);
+    color: var(--paper);
+    text-decoration:none;
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  .cta:hover{ background: var(--clay-dark); }
+  .redirect-note{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 18px;
+  }
+  .redirect-note span{ font-weight:700; color: var(--ink); }
+  .disclosure{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+  .brand{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    position:absolute;
+    top: 24px;
+    right: 40px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">Rooted & Ready</div>
+    <div class="eyebrow">Sound-Based Manifestation</div>
+    <h1>Your <em>abundance frequency</em> audio system is one click away.</h1>
+    <p class="lede">
+      We partnered with the creators of this audio program to bring it to our readers.
+      Click below to view how it works, pricing, and instant access.
+    </p>
+
+    <a href="#" id="cta-link" class="cta">View The Full Program →</a>
+
+    <div class="redirect-note">Redirecting automatically in <span id="countdown">5</span> seconds…</div>
+
+    <div class="divider"></div>
+
+    <div class="disclosure">
+      Disclosure: This page contains an affiliate link. If you make a purchase
+      through this link, we may earn a commission at no additional cost to you.
+      We only recommend products we believe add real value.
+    </div>
+  </div>
+
+  <script>
+    // ==== EDIT THIS ONE LINE ====
+    const AFFILIATE_LINK = "https://www.digistore24.com/redir/439776/wahlamandeep1100b6/";
+    // ============================
+
+    document.getElementById('cta-link').href = AFFILIATE_LINK;
+
+    let seconds = 5;
+    const countdownEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      seconds -= 1;
+      countdownEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = AFFILIATE_LINK;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
